@@ -16,11 +16,11 @@ class <%=h.changeCase.pascal(pagename) %>Page extends React.Component<Props, any
     return (
       <IonPage>
         <CommonHeader title="<%=title %>" defaultUrl="<%=gobackdefaultUrl %>"/>
-        <IonContent className="<%=filename %>">
+        <IonContent className="<%=pagename %>">
         </IonContent>
       </IonPage>
     );
   }
 }
 
-export default withIonLifeCycle(<%=pageName %>Page);
+export default withIonLifeCycle(<%=h.changeCase.pascal(pagename) %>Page);

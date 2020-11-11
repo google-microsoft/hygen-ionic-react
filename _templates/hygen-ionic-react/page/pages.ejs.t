@@ -10,7 +10,7 @@ type Props = {}
 class <%=h.changeCase.pascal(pagename) %>Page extends React.Component<Props, any> {
 
   async ionViewDidEnter() {
-      console.log('page <%=h.changeCase.pascal(pageName) %> ionViewDidEnter');
+      console.log('page <%=h.changeCase.pascal(pagename) %> ionViewDidEnter');
   }
   render() {
     return (

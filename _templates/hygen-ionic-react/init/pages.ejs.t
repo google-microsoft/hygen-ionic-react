@@ -7,7 +7,7 @@ import React from "react";
 import './<%= pagename %>.scss'
 
 type Props = {}
-class <%=h.changeCase.pascal(pagename) %>Page extends React.Component<Props, any> {
+class <%=pageName %>Page extends React.Component<Props, any> {
 
   async ionViewDidEnter() {
       console.log('page <%=pageName %> ionViewDidEnter');

@@ -67,13 +67,6 @@ If you want to install a `react` package from both `acme` and `awesome`, you can
 ## create ionic-react page 
 ```shell script
 
-hygen  hygen-ionic-react page --path a/c/c --pagename test 
-
-```
-
-## install ionic-react  typescript dependent 
-```shell script
-
-hygen hygen-ionic-react i
+hygen  hygen-ionic-react page --path tabs/myself/myself-center/records/record-recharge-withdraw --pagename record-recharge-withdraw --title 充提记录 --gobackdefaultUrl /tabs/myself --headerComponent .
 
 ```

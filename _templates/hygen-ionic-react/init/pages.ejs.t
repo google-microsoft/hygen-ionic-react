@@ -1,5 +1,5 @@
 ---
-to: src/page/<%= path %>/<%= pagename %>.tsx
+to: src/pages/<%= path %>/<%= pagename %>.tsx
 ---
 import {IonContent, IonPage, withIonLifeCycle} from "@ionic/react";
 import CommonHeader from "<%=headerComponent %>/common-header";

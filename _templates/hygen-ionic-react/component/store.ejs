@@ -1,0 +1,32 @@
+---
+to: src/components/<%= path %>/<%= name %>-store.ts
+---
+
+import {createStore} from "redux";
+
+type State = {
+
+}
+
+export type optAction = {
+    type: 'show' | 'hide',
+    state?: State
+}
+
+export const <%=h.changeCase.pascal(name) %>Store = createStore((state = false, action: optAction) => {
+    return {
+        isOpen: action.type == 'show',
+        ...action.state,
+    }
+});
+
+export let <%=h.changeCase.pascal(name) %>Show = (state: State) => {
+    <%=h.changeCase.pascal(name) %>Store.dispatch({
+        type: 'show', state
+    })
+};
+export let <%=h.changeCase.pascal(name) %>Hide = () => {
+    <%=h.changeCase.pascal(name) %>Store.dispatch({
+        type: 'hide'
+    })
+};

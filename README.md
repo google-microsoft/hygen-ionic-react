@@ -59,14 +59,17 @@ If you want to install a `react` package from both `acme` and `awesome`, you can
 `$ hygen-add awesome-react --prefix awsm`
 
 
-
-
-
 # hygen-ionic-react
 
 ## create ionic-react page 
 ```shell script
 
-hygen  hygen-ionic-react page --path tabs/myself/myself-center/records/record-recharge-withdraw --pagename record-recharge-withdraw --title 充提记录 --gobackdefaultUrl /tabs/myself --headerComponent .
+hygen  hygen-ionic-react page --path a/b/c --name mypage --title testile --gobackdefaultUrl /
+
+```
+## create ionic-component  
+```shell script
+
+hygen  hygen-ionic-react component --path a/b/c --name mycomp
 
 ```

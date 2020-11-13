@@ -1,0 +1,14 @@
+---
+to: src/components/<%= path %>/<%= name %>-component.tsx
+---
+import './<%= name %>.scss'
+type Props = {}
+
+export default function <%=h.changeCase.pascal(name) %>Component({}: Props) {
+    return (
+        <div className="<%=name %>">
+
+        </div>
+    );
+}
+

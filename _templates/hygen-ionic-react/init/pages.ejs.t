@@ -7,7 +7,7 @@ import React from "react";
 import './<%= name %>-page.scss'
 
 type Props = {}
-class <%=h.changeCase.pascal(name) %>Page extends React.-Page<Props, any> {
+class <%=h.changeCase.pascal(name) %>Page extends React.Component<Props, any> {
 
   async ionViewDidEnter() {
       console.log('page <%=h.changeCase.pascal(name) %> ionViewDidEnter');
@@ -16,7 +16,7 @@ class <%=h.changeCase.pascal(name) %>Page extends React.-Page<Props, any> {
     return (
       <IonPage>
         <CommonHeader title="<%=title %>" defaultUrl="<%=gobackdefaultUrl %>"/>
-        <IonContent className="<%=name %>">
+        <IonContent className="<%=name %>-page">
         </IonContent>
       </IonPage>
     );

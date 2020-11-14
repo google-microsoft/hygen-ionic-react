@@ -16,7 +16,7 @@ class <%=h.changeCase.pascal(name) %>Page extends React.Component<Props, any> {
     return (
       <IonPage>
         <CommonHeader title="<%=title %>" defaultUrl="<%=gobackdefaultUrl %>"/>
-        <IonContent className="<%=name %>">
+        <IonContent className="<%=name %>-page">
         </IonContent>
       </IonPage>
     );

@@ -1,0 +1,7 @@
+---
+inject: true
+to: src/App.tsx
+after: IonReactRouter
+skip_if: import <%=h.changeCase.pascal(name) %>Page
+---
+import <%=h.changeCase.pascal(name) %>Page from '<%=srcGoSourcePath %>/<%= name %>-page';

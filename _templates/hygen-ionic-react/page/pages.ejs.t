@@ -1,13 +1,13 @@
 ---
-to: src/pages/<%= path %>/<%= name %>.tsx
+to: src/pages/<%= path %>/<%= name %>-page.tsx
 ---
 import {IonContent, IonPage, withIonLifeCycle} from "@ionic/react";
 import CommonHeader from "./common-header";
 import React from "react";
-import './<%= name %>.scss'
+import './<%= name %>-page.scss'
 
 type Props = {}
-class <%=h.changeCase.pascal(name) %>Page extends React.Component<Props, any> {
+class <%=h.changeCase.pascal(name) %>Page extends React.-Page<Props, any> {
 
   async ionViewDidEnter() {
       console.log('page <%=h.changeCase.pascal(name) %> ionViewDidEnter');

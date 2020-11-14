@@ -1,0 +1,9 @@
+---
+inject: true
+to: src/App.tsx
+after: <Route
+skip_if: \<Route path="/<%= path %>"
+---
+
+    <Route path="/<%= path %>" component={<%=h.changeCase.pascal(name) %>Page} exact={true}/>
+

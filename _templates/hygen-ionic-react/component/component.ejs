@@ -2,14 +2,34 @@
 to: src/components/<%= path %>/<%= name %>-component.tsx
 ---
 import React from 'react';
+import {Unsubscribe} from "redux";
+import {<%=h.changeCase.pascal(name) %>Store} from "./<%= name %>-store";
+
 import './<%= name %>.scss'
 type Props = {}
 
-export default function <%=h.changeCase.pascal(name) %>Component({}: Props) {
-    return (
-        <div className="<%=name %>">
+export default class <%=h.changeCase.pascal(name) %>Component extends React.Component<Props, any>  {
+    private mounted = true;
+    componentDidMount() {
+        this.mounted = true;
+        this.unsubscribe = <%=h.changeCase.pascal(name) %>Store.subscribe(() => {
+            if (this.mounted) {
+                this.setState(<%=h.changeCase.pascal(name) %>Store.getState());
+            }
+        });
+    }
 
-        </div>
-    );
+    componentWillUnmount() {
+        this.mounted = false;
+        this.unsubscribe && this.unsubscribe();
+    }
+    render() {
+        return (
+            <div className="<%=name %>">
+
+            </div>
+        );
+
+    }
 }
 

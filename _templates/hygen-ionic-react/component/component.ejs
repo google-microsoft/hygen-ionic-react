@@ -4,11 +4,12 @@ to: src/components/<%= path %>/<%= name %>-component.tsx
 import React from 'react';
 import {Unsubscribe} from "redux";
 import {<%=h.changeCase.pascal(name) %>Store} from "./<%= name %>-store";
+import './<%= name %>.scss';
 
-import './<%= name %>.scss'
 type Props = {}
 
 export default class <%=h.changeCase.pascal(name) %>Component extends React.Component<Props, any>  {
+    private unsubscribe: Unsubscribe | undefined;
     private mounted = true;
     componentDidMount() {
         this.mounted = true;

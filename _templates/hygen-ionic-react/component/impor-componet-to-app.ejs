@@ -1,0 +1,7 @@
+---
+inject: true
+to: src/App.tsx
+after: {IonReactRouter}
+skip_if: {<%=h.changeCase.pascal(name) %>Component}
+---
+import {<%=h.changeCase.pascal(name) %>Component} from '<%=srcGoSourcePath %>/<%= name %>-component';

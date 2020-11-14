@@ -1,0 +1,8 @@
+---
+inject: true
+to: src/App.tsx
+after: <IonApp>
+skip_if: <<%=h.changeCase.pascal(name) %>Component />
+---
+
+    <<%=h.changeCase.pascal(name) %>Component />

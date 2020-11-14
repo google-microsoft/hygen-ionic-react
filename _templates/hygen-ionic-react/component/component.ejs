@@ -8,7 +8,7 @@ import './<%= name %>.scss';
 
 type Props = {}
 
-export default class <%=h.changeCase.pascal(name) %>Component extends React.Component<Props, any>  {
+export  class <%=h.changeCase.pascal(name) %>Component extends React.Component<Props, any>  {
     private unsubscribe: Unsubscribe | undefined;
     private mounted = true;
     componentDidMount() {
